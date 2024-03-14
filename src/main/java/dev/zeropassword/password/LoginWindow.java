@@ -113,6 +113,17 @@ public class LoginWindow extends JPanel implements ActionListener {
         String enteredUsername = txtUsername.getText().toLowerCase();
         String enteredPassword = new String(txtPassword.getPassword());
 
+        if (enteredUsername.length() < 3) {
+            JOptionPane.showMessageDialog(this, "Username must be at least 3 characters long.");
+            return;
+        }
+
+        // Check password length
+        if (enteredPassword.length() < 8) {
+            JOptionPane.showMessageDialog(this, "Password must be at least 8 characters long.");
+            return;
+        }
+
         String connectionString = "mongodb+srv://" + mongoUser + ":" + mongoPass + "@" + mongoCluster + "/";
         String databaseName = mongoDB;
 
