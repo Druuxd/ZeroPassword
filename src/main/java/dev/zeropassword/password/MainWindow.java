@@ -48,7 +48,7 @@ public class MainWindow extends JFrame implements ActionListener {
 		super(title);
 		this.loggedInUser = loggedInUser;
 
-		ImageIcon icon = new ImageIcon("D:/Coding/GitHub/Password/zeroLogo.jpg");
+		ImageIcon icon = new ImageIcon("zeroLogo.jpg");
 		setIconImage(icon.getImage());
 
 		setLayout(new MigLayout("fill, insets 20", "[center]","[center]"));
