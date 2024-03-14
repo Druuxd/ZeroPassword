@@ -118,15 +118,20 @@ public class Register extends JPanel {
         return panel;
     }
 
-    public boolean isMatchPassword() {
-        String password = String.valueOf(txtPassword.getPassword());
-        String confirmPassword = String.valueOf(txtConfirmPassword.getPassword());
-        return password.equals(confirmPassword);
-    }
-
     private void signUpActionPerformed() {
         String enteredUsername = txtUsername.getText().toLowerCase();
         String enteredPassword = new String(txtPassword.getPassword());
+
+        if (enteredUsername.length() < 3) {
+            JOptionPane.showMessageDialog(this, "Username must be at least 3 characters long.");
+            return;
+        }
+
+        // Check password length
+        if (enteredPassword.length() < 8) {
+            JOptionPane.showMessageDialog(this, "Password must be at least 8 characters long.");
+            return;
+        }
 
         String connectionString = "mongodb+srv://" + mongoUser + ":" + mongoPass + "@" + mongoCluster + "/";
         String databaseName = mongoDB;
