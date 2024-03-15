@@ -19,6 +19,8 @@ git clone https://github.com/Druuxd/ZeroPassword
 
 2. Install dependencies:
 
+**JDK 21**: https://www.oracle.com/ro/java/technologies/downloads/
+
 **MongoDB Java driver**: https://github.com/mongodb/mongo-java-driver
 
 **FlatLaf**: https://github.com/topics/flatlaf
