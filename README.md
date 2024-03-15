@@ -46,7 +46,7 @@ java PasswordApplication
 2. Register a new user or log in with existing credentials.
    
 3. To add a new account:
- * Click the "Add Account" button (location may vary depending on UI).
+ * Click the "Add Account" button.
  * Enter website/application name, username, and password.
    
 4. Manage Accounts:
